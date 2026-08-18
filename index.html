@@ -1,122 +1,461 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Happy Birthday عمار ❤️</title>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Pacifico&display=swap');
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#10070d;color:#fff;font-family:Cairo,Arial,sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 15% 20%,#ff6f9a22 0 2px,transparent 3px),radial-gradient(circle at 80% 35%,#ff9cbb22 0 2px,transparent 3px);background-size:140px 140px;z-index:-1}
-header{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:35px 18px;background:radial-gradient(circle at 50% 38%,#8f234b55,transparent 38%),linear-gradient(180deg,#160910,#0d060b)}
-.wrap{width:min(1050px,94%);margin:auto}.hero h1{font-family:Pacifico,cursive;font-size:clamp(55px,12vw,110px);font-weight:400;color:#ff86ad;text-shadow:0 0 18px #ff477d88;margin:10px 0}
-.hero .name{font-size:clamp(24px,5vw,42px);font-weight:700}.small{font-size:18px;color:#ffd5e1}.hero p{font-size:clamp(20px,4vw,30px);margin:10px 0 25px}
-button{border:0;color:white;background:linear-gradient(135deg,#ff719b,#a93662);padding:14px 27px;border-radius:999px;font:700 16px Cairo;cursor:pointer;box-shadow:0 8px 30px #ff4f7b35}
-section{padding:55px 0}.card{background:#190d15e8;border:1px solid #ff7da344;border-radius:25px;padding:28px;margin:18px 0;box-shadow:0 15px 45px #0008}
-.title{text-align:center;font-size:27px;margin:0 0 25px}.title span{color:#ff86ad}
-.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.time{background:#29121e;border:1px solid #ff7da333;border-radius:18px;padding:18px;text-align:center}.num{font-size:38px;font-weight:700;color:#ff91b2}.label{color:#ffd0dc}
-.photos{display:flex;flex-direction:column;gap:20px;max-width:520px;margin:auto}.photo{width:100%;aspect-ratio:1/1.12;background:#eee;padding:9px 9px 28px;transform:rotate(var(--r));box-shadow:0 8px 20px #0007;color:#333}.photo img{width:100%;height:100%;object-fit:cover;background:#f3b3c6}.photo div{text-align:center;font-family:cursive;margin-top:5px}
-.longmsg{line-height:2.15;color:#ffe5ed;font-size:17px;text-align:right}.longmsg p{margin:0 0 20px}
-.quote{font-size:24px;text-align:center;color:#ffd7e3;border:1px solid #ff7da355;background:#21101a;border-radius:20px;padding:25px}
-audio{width:100%;max-width:500px;filter:hue-rotate(300deg);margin:12px auto;display:block}
-footer{text-align:center;padding:35px;color:#c99aa9}
-@media(max-width:700px){.countdown{grid-template-columns:repeat(2,1fr)}section{padding:35px 0}.card{padding:20px}.longmsg{font-size:16px}}
-</style>
-</head>
-<body>
-<header>
- <div class="hero wrap">
-  <div class="small">💗 مفاجأة صغيرة معمولة مخصوص ليك 💗</div>
-  <div class="name">يا عمار... يا عامر ❤️👑</div>
-  <h1>Happy Birthday</h1>
-  <p>كل سنة وإنت طيب يا حبيب روحي ❤️</p>
-  <button onclick="document.getElementById('surprise').scrollIntoView()">إنجز وافتح هنا 💗</button>
- </div>
-</header>
-<main id="surprise" class="wrap">
-<section><div class="card">
-<h2 class="title">💗 العد التنازلي لعيد ميلاد عامر 💗</h2>
-<div class="countdown">
-<div class="time"><div class="num" id="days">00</div><div class="label">يوم</div></div>
-<div class="time"><div class="num" id="hours">00</div><div class="label">ساعة</div></div>
-<div class="time"><div class="num" id="mins">00</div><div class="label">دقيقة</div></div>
-<div class="time"><div class="num" id="secs">00</div><div class="label">ثانية</div></div>
-</div></div></section>
 
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 
-
-<section><div class="card">
-<h2 class="title">🎵 الأغنية بتاعتنا</h2>
-<p style="text-align:center;color:#ffdbe5">اختاري الأغنية من موبايلك 💗</p>
-<input id="songPicker" type="file" accept="audio/*" style="display:block;width:100%;padding:12px;border-radius:14px;background:#29121e;color:#fff;border:1px solid #ff7da355">
-<audio id="player" controls style="display:none"></audio>
-</div></section>
-
-<section><div class="card">
-<h2 class="title">💗 ذكرياتنا 📸</h2><p class="small" style="text-align:center">إنجزي وحطي صورك هنا 💗 — تقدري تضيفي لحد 16 صورة</p>
-<div class="photos" id="photoGrid"></div></div></section>
-
-<section><div class="card">
-<h2 class="title">💌 رسالة عيد ميلادك 💌</h2>
-<div class="longmsg"><p>بما انك بتقرء المسدج دي يبق اكيد الدنيا مشيت زي مكان مترتبلها الحمد لله الحقيقى ان المسدج دي مكتوبه قبلها بشهرين اصلا بس عشان بخلص حاجه حاجه ونفسي اي حاجه منهم تسعدك ❤️</p><p>كل سنه وانت طيب يحبيبى وحبيب روحي ❤️ يارب تكون كويس ومرتاح وقلبك هادي ومطمن لانه ميستاهلش غير كدا 🤍</p><p>م عارفه ابدء منين اوي الحقيقه بس عايزه اقولك اني بحب اليوم دا اوي وبحمد ربنا مليون مره انك جتلي في الدنيا بخير وكويس وعرفتك وحبيتك كدا انا لولا اليوم دا كان زماني عايشه منغير روحي ❤️‍🩹</p><p>كان نفسي ابق موجود اوي واعملك كل الى فدماغي والى كنت مخططاله كنت متأكده انك هتتبسط اوي بي بس خير الظروف حكمت بكدا ودا غصب عننا ومعرفتش اعدي اليوم عادي ومنغير معمل اي حاجه تفرحك او تبسطك ويارب تتبسط واكون عرفت اعمل دا يعني لأن انا حقيقي بحبك وحقيقي عيني م عايزه تشوفك غير مبسوط وفرحان انا ضحكتك بتنورلي الدنيا ❤️</p><p>انت مشيت اه بس اليوم دا ممشيش من بالي ابدا وبمناسبه اليوم دا م عايزه أطول عليك بس عايزه اقولك اني بحبك ويمكن م بس بحبك انا بدمنك واني محبتش غيرك ولا عايزه احب غيرك واني كل الحب الى فقلبي خلص ليك ومعاك عايزه دايما اشوفك مبسوط وكويس وفرحان عايزه علطول اشوف ضحكتك وعايزه ابق فخوره بسك اكتر مانا فخوره بيك اعمل الى عليك فالي جاي وشد حيلك خليك دايما كويس وم بتعمل غير الصح وكل الناس شيفاك كويس م عيزاك تتغير عايزه افضل اقول عليك انك احسن راجل فحياتي وفالدنيا بحالها وانا عارفه انك قد دا ❤️👑</p><p>م عيزاك تزعل ابدا اي كان السبب متزعلش ولا تخلي قلبك يزعل قلبك دا اعتبره امانه انا سيبهالك حافظ عليها عشان خاطري 🫂❤️</p><p>يمكن الظروف مخليتناش نكمل ويمكن محصلش إننا احتفلنا بيك زي ما كنت أتمنى بس كان نفسي على الأقل أفرحك في يومك🤍</p><p>كل سنه وانت حبيبى وابويا واخويا وكل حاجه فدنيتي كل سنه وانت عيلتي التانيه وحضني الى كنت بلجأله ياربت تبق سنه سعيده عليك وبدايه جديده فحاجات كويسه شبهك تستاهلها وتستاهلك يارب خلال الشهرين دول يكون ضهرك خف وبقيت احسن هدعيلك زي كل مره ويارب تبق اشتغلت واخدت اجازتك واتبسطت وعملت كل الى انت عايزه والى يبسطك ولو معملتش فخير هيحصل كل الى انت عايزه بس كله فوقته داخلين علي سنه مهمه اتمني تعمل الى عليك فيها زي متفقنا وانك تخليني دايما فخوره بيك واشوفك احسن دكتور علاج طبيعي فالدنيا وفعنيا عشان احصلك انا كمان بما انك خلاص خليته حلمي قبل متمشي فنكمل سوا حتي لو مش سوا</p><p>Happy Birthday يعامر 😍❤️👑</p></div>
-</div></section>
-
-<section><div class="quote">
-❤️ آي ميك شور إن قلبي هيفضل يحبك مهما حصل ومهما كان وضعنا ❤️
-</div></section>
-</main>
-<footer>Made with love for عمار / عامر ❤️👑</footer>
-
-<script>
-const birthday = new Date("2026-08-19T00:00:00");
-function pad(n){return String(Math.max(0,n)).padStart(2,"0")}
-function tick(){
- const d=Math.max(0,birthday-new Date()),s=Math.floor(d/1000);
- document.getElementById("days").textContent=pad(Math.floor(s/86400));
- document.getElementById("hours").textContent=pad(Math.floor(s%86400/3600));
- document.getElementById("mins").textContent=pad(Math.floor(s%3600/60));
- document.getElementById("secs").textContent=pad(s%60);
+body{
+margin:0;
+background:#10070d;
+color:#fff;
+font-family:Cairo,Arial,sans-serif;
+overflow-x:hidden
 }
-setInterval(tick,1000);tick();
 
+body:before{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+background:
+radial-gradient(circle at 15% 20%,#ff6f9a22 0 2px,transparent 3px),
+radial-gradient(circle at 80% 35%,#ff9cbb22 0 2px,transparent 3px);
+background-size:140px 140px;
+z-index:-1
+}
+
+header{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:35px 18px;
+background:
+radial-gradient(circle at 50% 38%,#8f234b55,transparent 38%),
+linear-gradient(180deg,#160910,#0d060b)
+}
+
+.wrap{
+width:min(1050px,94%);
+margin:auto
+}
+
+.hero h1{
+font-family:Pacifico,cursive;
+font-size:clamp(55px,12vw,110px);
+font-weight:400;
+color:#ff86ad;
+text-shadow:0 0 18px #ff477d88;
+margin:10px 0
+}
+
+.hero .name{
+font-size:clamp(24px,5vw,42px);
+font-weight:700
+}
+
+.small{
+font-size:18px;
+color:#ffd5e1
+}
+
+.hero p{
+font-size:clamp(20px,4vw,30px);
+margin:10px 0 25px
+}
+
+button{
+border:0;
+color:white;
+background:linear-gradient(135deg,#ff719b,#a93662);
+padding:14px 27px;
+border-radius:999px;
+font:700 16px Cairo;
+cursor:pointer;
+box-shadow:0 8px 30px #ff4f7b35
+}
+
+section{
+padding:55px 0
+}
+
+.card{
+background:#190d15e8;
+border:1px solid #ff7da344;
+border-radius:25px;
+padding:28px;
+margin:18px 0;
+box-shadow:0 15px 45px #0008
+}
+
+.title{
+text-align:center;
+font-size:27px;
+margin:0 0 25px
+}
+
+.countdown{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:12px
+}
+
+.time{
+background:#29121e;
+border:1px solid #ff7da333;
+border-radius:18px;
+padding:18px;
+text-align:center
+}
+
+.num{
+font-size:38px;
+font-weight:700;
+color:#ff91b2
+}
+
+.label{
+color:#ffd0dc
+}
+
+.photos{
+display:flex;
+flex-direction:column;
+gap:20px;
+max-width:520px;
+margin:auto
+}
+
+.photo{
+width:100%;
+aspect-ratio:1/1.12;
+background:#eee;
+padding:9px 9px 28px;
+transform:rotate(var(--r));
+box-shadow:0 8px 20px #0007;
+color:#333
+}
+
+.photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+background:#f3b3c6
+}
+
+.photo div{
+text-align:center;
+font-family:cursive;
+margin-top:5px
+}
+
+.longmsg{
+line-height:2.15;
+color:#ffe5ed;
+font-size:17px;
+text-align:right
+}
+
+.longmsg p{
+margin:0 0 20px
+}
+
+.quote{
+font-size:24px;
+text-align:center;
+color:#ffd7e3;
+border:1px solid #ff7da355;
+background:#21101a;
+border-radius:20px;
+padding:25px
+}
+
+audio{
+width:100%;
+max-width:500px;
+margin:12px auto;
+display:block
+}
+
+footer{
+text-align:center;
+padding:35px;
+color:#c99aa9
+}
+
+@media(max-width:700px){
+.countdown{
+grid-template-columns:repeat(2,1fr)
+}
+
+section{
+padding:35px 0
+}
+
+.card{
+padding:20px
+}
+
+.longmsg{
+font-size:16px
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="hero wrap">
+
+<div class="small">
+💗 مفاجأة صغيرة معمولة مخصوص ليك 💗
+</div>
+
+<div class="name">
+يا عمار... يا عامر ❤️👑
+</div>
+
+<h1>
+Happy Birthday
+</h1>
+
+<p>
+كل سنة وإنت طيب يا حبيب روحي ❤️
+</p>
+
+<button onclick="document.getElementById('surprise').scrollIntoView()">
+إنجز وافتح هنا 💗
+</button>
+
+</div>
+</header>
+
+<main id="surprise" class="wrap">
+
+<section>
+<div class="card">
+
+<h2 class="title">
+💗 العد التنازلي لعيد ميلاد عامر 💗
+</h2>
+
+<div class="countdown">
+
+<div class="time">
+<div class="num" id="days">00</div>
+<div class="label">يوم</div>
+</div>
+
+<div class="time">
+<div class="num" id="hours">00</div>
+<div class="label">ساعة</div>
+</div>
+
+<div class="time">
+<div class="num" id="mins">00</div>
+<div class="label">دقيقة</div>
+</div>
+
+<div class="time">
+<div class="num" id="secs">00</div>
+<div class="label">ثانية</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="card">
+
+<h2 class="title">
+🎵 الأغنية بتاعتنا
+</h2>
+
+<p style="text-align:center;color:#ffdbe5">
+اضغطي تشغيل واسمعيها وإنتِ بتتفرجي 💗
+</p>
+
+<audio id="player" controls>
+<source src="1000677277.mp3" type="audio/mpeg">
+متصفحك لا يدعم تشغيل الصوت.
+</audio>
+
+</div>
+</section>
+
+<section>
+<div class="card">
+
+<h2 class="title">
+💗 ذكرياتنا 📸
+</h2>
+
+<p class="small" style="text-align:center">
+16 ذكرى مخصوصة ليك 💗
+</p>
+
+<div class="photos" id="photoGrid">
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="card">
+
+<h2 class="title">
+💌 رسالة عيد ميلادك 💌
+</h2>
+
+<div class="longmsg">
+
+<p>
+بما انك بتقرء المسدج دي يبق اكيد الدنيا مشيت زي مكان مترتبلها الحمد لله الحقيقى ان المسدج دي مكتوبه قبلها بشهرين اصلا بس عشان بخلص حاجه حاجه ونفسي اي حاجه منهم تسعدك ❤️
+</p>
+
+<p>
+كل سنه وانت طيب يحبيبى وحبيب روحي ❤️ يارب تكون كويس ومرتاح وقلبك هادي ومطمن لانه ميستاهلش غير كدا 🤍
+</p>
+
+<p>
+م عارفه ابدء منين اوي الحقيقه بس عايزه اقولك اني بحب اليوم دا اوي وبحمد ربنا مليون مره انك جتلي في الدنيا بخير وكويس وعرفتك وحبيتك كدا انا لولا اليوم دا كان زماني عايشه منغير روحي ❤️‍🩹
+</p>
+
+<p>
+كان نفسي ابق موجود اوي واعملك كل الى فدماغي والى كنت مخططاله كنت متأكده انك هتتبسط اوي بي بس خير الظروف حكمت بكدا ودا غصب عننا ومعرفتش اعدي اليوم عادي ومنغير معمل اي حاجه تفرحك او تبسطك ويارب تتبسط واكون عرفت اعمل دا يعني لأن انا حقيقي بحبك وحقيقي عيني م عايزه تشوفك غير مبسوط وفرحان انا ضحكتك بتنورلي الدنيا ❤️
+</p>
+
+<p>
+انت مشيت اه بس اليوم دا ممشيش من بالي ابدا وبمناسبه اليوم دا م عايزه أطول عليك بس عايزه اقولك اني بحبك ويمكن م بس بحبك انا بدمنك واني محبتش غيرك ولا عايزه احب غيرك واني كل الحب الى فقلبي خلص ليك ومعاك عايزه دايما اشوفك مبسوط وكويس وفرحان عايزه علطول اشوف ضحكتك وعايزه ابق فخوره بسك اكتر مانا فخوره بيك اعمل الى عليك فالي جاي وشد حيلك خليك دايما كويس وم بتعمل غير الصح وكل الناس شيفاك كويس م عيزاك تتغير عايزه افضل اقول عليك انك احسن راجل فحياتي وفالدنيا بحالها وانا عارفه انك قد دا ❤️👑
+</p>
+
+<p>
+م عيزاك تزعل ابدا اي كان السبب متزعلش ولا تخلي قلبك يزعل قلبك دا اعتبره امانه انا سيبهالك حافظ عليها عشان خاطري 🫂❤️
+</p>
+
+<p>
+يمكن الظروف مخليتناش نكمل ويمكن محصلش إننا احتفلنا بيك زي ما كنت أتمنى بس كان نفسي على الأقل أفرحك في يومك🤍
+</p>
+
+<p>
+كل سنه وانت حبيبى وابويا واخويا وكل حاجه فدنيتي كل سنه وانت عيلتي التانيه وحضني الى كنت بلجأله ياربت تبق سنه سعيده عليك وبدايه جديده فحاجات كويسه شبهك تستاهلها وتستاهلك يارب خلال الشهرين دول يكون ضهرك خف وبقيت احسن هدعيلك زي كل مره ويارب تبق اشتغلت واخدت اجازتك واتبسطت وعملت كل الى انت عايزه والى يبسطك ولو معملتش فخير هيحصل كل الى انت عايزه بس كله فوقته داخلين علي سنه مهمه اتمني تعمل الى عليك فيها زي متفقنا وانك تخليني دايما فخوره بيك واشوفك احسن دكتور علاج طبيعي فالدنيا وفعنيا عشان احصلك انا كمان بما انك خلاص خليته حلمي قبل متمشي فنكمل سوا حتي لو مش سوا
+</p>
+
+<p>
+Happy Birthday يعامر 😍❤️👑
+</p>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="quote">
+❤️ آي ميك شور إن قلبي هيفضل يحبك مهما حصل ومهما كان وضعنا ❤️
+</div>
+</section>
+
+</main>
+
+<footer>
+Made with love for عمار / عامر ❤️👑
+</footer><script>
+const birthday = new Date("2026-08-19T00:00:00");
+
+function pad(n){
+  return String(Math.max(0,n)).padStart(2,"0");
+}
+
+function tick(){
+  const d = Math.max(0,birthday-new Date());
+  const s = Math.floor(d/1000);
+
+  document.getElementById("days").textContent =
+    pad(Math.floor(s/86400));
+
+  document.getElementById("hours").textContent =
+    pad(Math.floor(s%86400/3600));
+
+  document.getElementById("mins").textContent =
+    pad(Math.floor(s%3600/60));
+
+  document.getElementById("secs").textContent =
+    pad(s%60);
+}
+
+setInterval(tick,1000);
+tick();
+
+
+/* الصور الـ16 */
+const photos = [
+"IMG-20260113-WA0381. jpg",
+"IMG-20260711-WA0020.jpg",
+"IMG-20260716-WA0074(1).jpg",
+"IMG20250608180304.jpg",
+"Screenshot_2026-01-10-18-00-50-13_6012fa4d4ddec268fc5c7112cbb265e7.jpg",
+"Snapchat-1170894931. jpg",
+"Snapchat-1435148205.jpg",
+"Snapchat-160954673.jpg",
+"Snapchat-1678166531. jpg",
+"Snapchat-1775794393.jpg",
+"Snapchat-1901350627.jpg",
+"Snapchat-2048429519.jpg",
+"Snapchat-38644365.jpg",
+"Snapchat-527962970.jpg",
+"Snapchat-579346745. jpg",
+"file_0000000091f4724385304db928e0e826.png"
+];
 
 const photoGrid = document.getElementById("photoGrid");
-for(let i=1;i<=16;i++){
-  const box=document.createElement("label");
-  box.className="photo empty";
-  box.style.setProperty("--r", ((i%3)-1)*1.7 + "deg");
-  box.innerHTML=`<input type="file" accept="image/*"><span class="add"><span class="plus">＋</span>إضافة صورة<br><small>ذكرى ${i} 💗</small></span>`;
-  const input=box.querySelector("input");
-  input.addEventListener("change",()=>{
-    const file=input.files[0];
-    if(!file) return;
-    const url=URL.createObjectURL(file);
-    box.className="photo";
-    box.innerHTML=`<img src="${url}" alt="ذكرى ${i}"><div>ذكرى ${i} 💗</div><input type="file" accept="image/*">`;
-    const newInput=box.querySelector("input");
-    newInput.addEventListener("change",()=>{
-      const f=newInput.files[0];
-      if(f) box.querySelector("img").src=URL.createObjectURL(f);
-    });
-  });
+
+photos.forEach((name,i)=>{
+
+  const box = document.createElement("div");
+
+  box.className = "photo";
+
+  box.style.setProperty(
+    "--r",
+    ((i%3)-1)*1.7 + "deg"
+  );
+
+  const img = document.createElement("img");
+
+  img.src = name;
+
+  img.alt = "ذكرى " + (i+1);
+
+  const caption = document.createElement("div");
+
+  caption.textContent = "ذكرى " + (i+1) + " 💗";
+
+  box.appendChild(img);
+  box.appendChild(caption);
+
   photoGrid.appendChild(box);
-}
 
-let ctx, timer, playing=false, step=0;
-function toggleMusic(){
- const btn=document.getElementById("musicBtn");
- if(!ctx) ctx=new (window.AudioContext||window.webkitAudioContext)();
- if(playing){clearInterval(timer);playing=false;btn.textContent="▶ شغّل الموسيقى";return;}
- playing=true;btn.textContent="⏸ إيقاف الموسيقى";
- const notes=[261.63,329.63,392,329.63,293.66,349.23,440,349.23];
- timer=setInterval(()=>{
-  const osc=ctx.createOscillator(),gain=ctx.createGain();
-  osc.type="sine";osc.frequency.value=notes[step++%notes.length];
-  gain.gain.setValueAtTime(.0001,ctx.currentTime);gain.gain.exponentialRampToValueAtTime(.045,ctx.currentTime+.04);gain.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+.8);
-  osc.connect(gain).connect(ctx.destination);osc.start();osc.stop(ctx.currentTime+.85);
- },900);
-}
+});
 
-const songPicker=document.getElementById("songPicker"), player=document.getElementById("player");
-songPicker.addEventListener("change",()=>{const f=songPicker.files[0]; if(f){player.src=URL.createObjectURL(f);player.style.display="block";}});
+
+/* الأغنية */
+const player = document.getElementById("player");
+
+player.addEventListener("error",()=>{
+  console.log("لم يتم العثور على ملف الأغنية");
+});
 </script>
-</body></html>
+
+</body>
+</html>
