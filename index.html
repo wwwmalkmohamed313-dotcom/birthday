@@ -1,221 +1,289 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Happy Birthday عمار ❤️</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Pacifico&display=swap');
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
-margin:0;
-background:#10070d;
-color:#fff;
-font-family:Cairo,Arial,sans-serif;
-overflow-x:hidden
+  margin:0;
+  background:#10070d;
+  color:#fff;
+  font-family:Arial,Tahoma,sans-serif;
+  overflow-x:hidden;
 }
 
-body:before{
-content:"";
-position:fixed;
-inset:0;
-pointer-events:none;
-background:
-radial-gradient(circle at 15% 20%,#ff6f9a22 0 2px,transparent 3px),
-radial-gradient(circle at 80% 35%,#ff9cbb22 0 2px,transparent 3px);
-background-size:140px 140px;
-z-index:-1
-}
-
-header{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:35px 18px;
-background:
-radial-gradient(circle at 50% 38%,#8f234b55,transparent 38%),
-linear-gradient(180deg,#160910,#0d060b)
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 15% 20%,#ff6f9a22 0 2px,transparent 3px),
+    radial-gradient(circle at 80% 35%,#ff9cbb22 0 2px,transparent 3px);
+  background-size:140px 140px;
+  z-index:-1;
 }
 
 .wrap{
-width:min(1050px,94%);
-margin:auto
+  width:min(900px,94%);
+  margin:auto;
 }
 
-.hero h1{
-font-family:Pacifico,cursive;
-font-size:clamp(55px,12vw,110px);
-font-weight:400;
-color:#ff86ad;
-text-shadow:0 0 18px #ff477d88;
-margin:10px 0
-}
+/* البداية */
 
-.hero .name{
-font-size:clamp(24px,5vw,42px);
-font-weight:700
+header{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:30px 15px;
+
+  background:
+    radial-gradient(circle at 50% 40%,#8f234b55,transparent 40%),
+    linear-gradient(180deg,#160910,#0d060b);
 }
 
 .small{
-font-size:18px;
-color:#ffd5e1
+  font-size:17px;
+  color:#ffd5e1;
+  margin-bottom:15px;
 }
 
-.hero p{
-font-size:clamp(20px,4vw,30px);
-margin:10px 0 25px
+.name{
+  font-size:clamp(25px,6vw,45px);
+  font-weight:bold;
 }
 
-button{
-border:0;
-color:white;
-background:linear-gradient(135deg,#ff719b,#a93662);
-padding:14px 27px;
-border-radius:999px;
-font:700 16px Cairo;
-cursor:pointer;
-box-shadow:0 8px 30px #ff4f7b35
+h1{
+  font-size:clamp(55px,13vw,105px);
+  margin:15px 0;
+  font-weight:400;
+  font-family:cursive;
+  color:#ff86ad;
+  text-shadow:0 0 20px #ff477d88;
 }
+
+.hero-text{
+  font-size:clamp(20px,4vw,29px);
+  margin-bottom:28px;
+}
+
+.open-btn{
+  border:0;
+  color:white;
+  background:linear-gradient(135deg,#ff719b,#a93662);
+  padding:15px 28px;
+  border-radius:999px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 8px 30px #ff4f7b35;
+}
+
+/* بداية المفاجأة */
+
+.intro{
+  text-align:center;
+  padding:45px 15px 20px;
+}
+
+.intro h2{
+  color:#ff91b2;
+  font-size:30px;
+  margin:12px 0;
+}
+
+.intro p{
+  color:#ffdbe5;
+  font-size:18px;
+  line-height:1.8;
+}
+
+.hearts{
+  font-size:28px;
+  letter-spacing:8px;
+  animation:floatHearts 2s ease-in-out infinite;
+}
+
+@keyframes floatHearts{
+  50%{
+    transform:translateY(-8px);
+  }
+}
+
+/* الأقسام */
 
 section{
-padding:55px 0
+  padding:35px 0;
 }
 
 .card{
-background:#190d15e8;
-border:1px solid #ff7da344;
-border-radius:25px;
-padding:28px;
-margin:18px 0;
-box-shadow:0 15px 45px #0008
+  background:#190d15ed;
+  border:1px solid #ff7da344;
+  border-radius:25px;
+  padding:28px;
+  margin:18px 0;
+  box-shadow:0 15px 45px #0008;
 }
 
 .title{
-text-align:center;
-font-size:27px;
-margin:0 0 25px
+  text-align:center;
+  font-size:27px;
+  margin:0 0 25px;
 }
 
 .countdown{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:12px
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
 }
 
 .time{
-background:#29121e;
-border:1px solid #ff7da333;
-border-radius:18px;
-padding:18px;
-text-align:center
+  background:#29121e;
+  border:1px solid #ff7da333;
+  border-radius:18px;
+  padding:18px 10px;
+  text-align:center;
 }
 
 .num{
-font-size:38px;
-font-weight:700;
-color:#ff91b2
+  font-size:38px;
+  font-weight:bold;
+  color:#ff91b2;
 }
 
 .label{
-color:#ffd0dc
+  color:#ffd0dc;
+  font-size:15px;
 }
 
-.photos{
-display:flex;
-flex-direction:column;
-gap:20px;
-max-width:520px;
-margin:auto
-}
+/* الأغنية */
 
-.photo{
-width:100%;
-aspect-ratio:1/1.12;
-background:#eee;
-padding:9px 9px 28px;
-transform:rotate(var(--r));
-box-shadow:0 8px 20px #0007;
-color:#333
-}
-
-.photo img{
-width:100%;
-height:100%;
-object-fit:cover;
-background:#f3b3c6
-}
-
-.photo div{
-text-align:center;
-font-family:cursive;
-margin-top:5px
-}
-
-.longmsg{
-line-height:2.15;
-color:#ffe5ed;
-font-size:17px;
-text-align:right
-}
-
-.longmsg p{
-margin:0 0 20px
-}
-
-.quote{
-font-size:24px;
-text-align:center;
-color:#ffd7e3;
-border:1px solid #ff7da355;
-background:#21101a;
-border-radius:20px;
-padding:25px
+.song-text{
+  text-align:center;
+  color:#ffdbe5;
+  line-height:1.8;
 }
 
 audio{
-width:100%;
-max-width:500px;
-margin:12px auto;
-display:block
+  width:100%;
+  max-width:500px;
+  display:block;
+  margin:20px auto 5px;
+}
+
+/* الصور */
+
+.photos{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+  align-items:start;
+}
+
+.photo{
+  background:#fff;
+  padding:9px 9px 30px;
+  box-shadow:0 8px 25px #0008;
+  color:#333;
+  transform:rotate(var(--r));
+  border-radius:2px;
+}
+
+.photo img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  background:#f3b3c6;
+}
+
+.photo-caption{
+  text-align:center;
+  font-family:cursive;
+  font-size:17px;
+  margin-top:8px;
+}
+
+/* الرسالة */
+
+.longmsg{
+  line-height:2.15;
+  color:#ffe5ed;
+  font-size:17px;
+  text-align:right;
+}
+
+.longmsg p{
+  margin:0 0 20px;
+}
+
+/* النهاية */
+
+.quote{
+  font-size:23px;
+  text-align:center;
+  color:#ffd7e3;
+  border:1px solid #ff7da355;
+  background:#21101a;
+  border-radius:20px;
+  padding:25px;
+  line-height:1.8;
 }
 
 footer{
-text-align:center;
-padding:35px;
-color:#c99aa9
+  text-align:center;
+  padding:35px;
+  color:#c99aa9;
 }
 
 @media(max-width:700px){
-.countdown{
-grid-template-columns:repeat(2,1fr)
+
+  .countdown{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .photos{
+    grid-template-columns:1fr;
+    max-width:520px;
+    margin:auto;
+  }
+
+  .card{
+    padding:20px;
+  }
+
+  .longmsg{
+    font-size:16px;
+  }
+
+  .title{
+    font-size:24px;
+  }
+
 }
 
-section{
-padding:35px 0
-}
-
-.card{
-padding:20px
-}
-
-.longmsg{
-font-size:16px
-}
-}
 </style>
-
 </head>
 
 <body>
 
 <header>
-<div class="hero wrap">
+
+<div class="wrap">
 
 <div class="small">
 💗 مفاجأة صغيرة معمولة مخصوص ليك 💗
@@ -229,20 +297,44 @@ font-size:16px
 Happy Birthday
 </h1>
 
-<p>
+<div class="hero-text">
 كل سنة وإنت طيب يا حبيب روحي ❤️
-</p>
+</div>
 
-<button onclick="document.getElementById('surprise').scrollIntoView()">
+<button
+class="open-btn"
+onclick="document.getElementById('surprise').scrollIntoView()"
+>
 إنجز وافتح هنا 💗
 </button>
 
 </div>
+
 </header>
+
 
 <main id="surprise" class="wrap">
 
+
+<section class="intro">
+
+<div class="hearts">
+💗 ✨ 💕 ✨ 💗
+</div>
+
+<h2>
+🎉 المفاجأة بدأت 🎉
+</h2>
+
+<p>
+عملتلك حاجة صغيرة مخصوص عشان يومك يبقى مميز ❤️
+</p>
+
+</section>
+
+
 <section>
+
 <div class="card">
 
 <h2 class="title">
@@ -272,46 +364,58 @@ Happy Birthday
 </div>
 
 </div>
+
 </div>
+
 </section>
 
+
 <section>
+
 <div class="card">
 
 <h2 class="title">
 🎵 الأغنية بتاعتنا
 </h2>
 
-<p style="text-align:center;color:#ffdbe5">
-اضغطي تشغيل واسمعيها وإنتِ بتتفرجي 💗
+<p class="song-text">
+دي الأغنية اللي اخترتها عشان تكمل معانا الجو ❤️
 </p>
 
-<audio id="player" controls>
+<audio controls>
+
 <source src="1000677277.mp3" type="audio/mpeg">
-متصفحك لا يدعم تشغيل الصوت.
+
+متصفحك لا يدعم تشغيل الأغنية.
+
 </audio>
 
 </div>
+
 </section>
 
+
 <section>
+
 <div class="card">
 
 <h2 class="title">
 💗 ذكرياتنا 📸
 </h2>
 
-<p class="small" style="text-align:center">
+<p style="text-align:center;color:#ffdbe5;line-height:1.8">
 16 ذكرى مخصوصة ليك 💗
 </p>
 
-<div class="photos" id="photoGrid">
-</div>
+<div class="photos" id="photoGrid"></div>
 
 </div>
+
 </section>
 
+
 <section>
+
 <div class="card">
 
 <h2 class="title">
@@ -357,70 +461,107 @@ Happy Birthday يعامر 😍❤️👑
 </p>
 
 </div>
+
 </div>
+
 </section>
 
+
 <section>
+
 <div class="quote">
 ❤️ آي ميك شور إن قلبي هيفضل يحبك مهما حصل ومهما كان وضعنا ❤️
 </div>
+
 </section>
+
 
 </main>
 
+
 <footer>
 Made with love for عمار / عامر ❤️👑
-</footer><script>
+</footer>
+
+
+<script>
+
+/* العد التنازلي */
+
 const birthday = new Date("2026-08-19T00:00:00");
 
-function pad(n){
-  return String(Math.max(0,n)).padStart(2,"0");
+function pad(number){
+  return String(Math.max(0,number)).padStart(2,"0");
 }
 
 function tick(){
-  const d = Math.max(0,birthday-new Date());
-  const s = Math.floor(d/1000);
+
+  const difference = Math.max(0,birthday - new Date());
+
+  const seconds = Math.floor(difference / 1000);
 
   document.getElementById("days").textContent =
-    pad(Math.floor(s/86400));
+    pad(Math.floor(seconds / 86400));
 
   document.getElementById("hours").textContent =
-    pad(Math.floor(s%86400/3600));
+    pad(Math.floor((seconds % 86400) / 3600));
 
   document.getElementById("mins").textContent =
-    pad(Math.floor(s%3600/60));
+    pad(Math.floor((seconds % 3600) / 60));
 
   document.getElementById("secs").textContent =
-    pad(s%60);
+    pad(seconds % 60);
+
 }
 
-setInterval(tick,1000);
 tick();
 
+setInterval(tick,1000);
 
-/* الصور الـ16 */
-];const photos = [
+
+/* الصور */
+
+const photos = [
+
 "IMG-20260113-WA0381.jpg",
+
 "IMG-20260711-WA0020.jpg",
+
 "IMG-20260716-WA0074(1).jpg",
+
 "IMG20250608180304.jpg",
+
 "Screenshot_2026-01-10-18-00-50-13_6012fa4d4ddec268fc5c7112cbb265e7.jpg",
+
 "Snapchat-1170894931.jpg",
+
 "Snapchat-1435148205.jpg",
+
 "Snapchat-160954673.jpg",
+
 "Snapchat-1678166531.jpg",
+
 "Snapchat-1775794393.jpg",
+
 "Snapchat-1901350627.jpg",
+
 "Snapchat-2048429519.jpg",
+
 "Snapchat-38644365.jpg",
+
 "Snapchat-527962970.jpg",
+
 "Snapchat-579346745.jpg",
+
 "file_0000000091f4724385304db928e0e826.png"
+
 ];
+
 
 const photoGrid = document.getElementById("photoGrid");
 
-photos.forEach((name,i)=>{
+
+photos.forEach((name,index)=>{
 
   const box = document.createElement("div");
 
@@ -428,33 +569,33 @@ photos.forEach((name,i)=>{
 
   box.style.setProperty(
     "--r",
-    ((i%3)-1)*1.7 + "deg"
+    ((index % 3) - 1) * 1.7 + "deg"
   );
+
 
   const img = document.createElement("img");
 
-  img.src = name;
+  img.src = "./" + name;
 
-  img.alt = "ذكرى " + (i+1);
+  img.alt = "ذكرى " + (index + 1);
+
 
   const caption = document.createElement("div");
 
-  caption.textContent = "ذكرى " + (i+1) + " 💗";
+  caption.className = "photo-caption";
+
+  caption.textContent =
+    "ذكرى " + (index + 1) + " 💗";
+
 
   box.appendChild(img);
+
   box.appendChild(caption);
 
   photoGrid.appendChild(box);
 
 });
 
-
-/* الأغنية */
-const player = document.getElementById("player");
-
-player.addEventListener("error",()=>{
-  console.log("لم يتم العثور على ملف الأغنية");
-});
 </script>
 
 </body>
